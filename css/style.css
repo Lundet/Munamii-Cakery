@@ -1,0 +1,129 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: #fff8f4;
+    color: #333;
+}
+.header-logo {
+    width: 100px; /* Resize the logo to a smaller width */
+    height: auto; /* Maintain aspect ratio */
+}
+.background-container {
+    background-image: url('../images/background.jpg'); /* <-- change this to your image path */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay {
+    background-color: rgba(255, 255, 255, 0.6); /* slight white overlay for readability */
+    padding: 20px 40px;
+    border-radius: 12px;
+  }
+  
+  .overlay h1 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+  }
+  
+header, footer {
+    padding: 20px 10px; /* Adjust padding for space */
+    background-color: #ffcad4;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Center the nav links */
+    align-items: center;
+
+}
+header nav a{
+    margin: 0rem 5rem;
+}
+
+header nav a, footer a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #444;
+    margin: 0.3em 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;  /* Spacing between items */
+}
+
+.product-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: calc(25% - 1.5rem);  /* Makes the cards take up 25% of the row, minus the gap */
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+.wedding-cake {
+    margin-top: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.cupcakes {
+    margin: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+footer {
+    margin-top: 2rem;
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .product-card {
+        width: calc(33.33% - 1.5rem);  /* 3 items per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 1.5rem);  /* 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: calc(100% - 1.5rem);  /* 1 item per row on very small screens */
+    }
+}
